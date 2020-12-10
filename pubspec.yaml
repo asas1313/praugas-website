@@ -1,0 +1,37 @@
+name: praugas_site
+description: praugas.com Homepage website.
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.1
+  responsive_builder: ^0.3.0
+  get_it: ^4.0.4
+  provider_architecture: ^1.1.1+1
+  provider: ^4.1.2
+  http: ^0.12.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo.png
+    - assets/images/front_img.png
+
+  fonts:
+    - family: Open Sans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 800
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 400
