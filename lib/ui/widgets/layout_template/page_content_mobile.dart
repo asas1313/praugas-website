@@ -10,7 +10,8 @@ class PageContentMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return SingleChildScrollView(
+        child: Column(
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -19,10 +20,10 @@ class PageContentMobile extends StatelessWidget {
           details: details,
         ),
         SizedBox(
-          height: 100,
+          height: 10,
         ),
         CallToAction(),
       ],
-    );
+    ));
   }
 }

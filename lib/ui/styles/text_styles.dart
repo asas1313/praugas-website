@@ -1,11 +1,15 @@
 import 'package:flutter/widgets.dart';
+import 'package:praugas_site/ui/styles/app_colors.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 /// Returns the style for a page title based on the [deviceScreenType] passed in.
 TextStyle titleTextStyle(DeviceScreenType deviceScreenType) {
   double titleSize = deviceScreenType == DeviceScreenType.mobile ? 50 : 80;
   return TextStyle(
-      fontWeight: FontWeight.w800, height: 0.9, fontSize: titleSize);
+      fontWeight: FontWeight.w800,
+      height: 0.9,
+      fontSize: titleSize,
+      color: primaryColor);
 }
 
 /// Return the style for description text on a page based on the [deviceScreenType] passed in.
@@ -14,7 +18,8 @@ TextStyle descriptionTextStyle(DeviceScreenType deviceScreenType) {
       deviceScreenType == DeviceScreenType.mobile ? 16 : 21;
 
   return TextStyle(
-    fontSize: descriptionSize,
-    height: 1.7,
-  );
+      fontWeight: FontWeight.w400,
+      fontSize: descriptionSize,
+      height: 1.2,
+      color: primaryColor);
 }

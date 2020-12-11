@@ -17,27 +17,33 @@ class PageDetails extends StatelessWidget {
                 : TextAlign.center;
 
         return Container(
-          width: 600,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                caption,
-                style: titleTextStyle(sizingInformation.deviceScreenType),
-                textAlign: textAlignment,
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                details,
-                style: descriptionTextStyle(sizingInformation.deviceScreenType),
-                textAlign: textAlignment,
+            width: 600,
+            child: Row(children: [
+              SizedBox(width: 30),
+              Container(
+                width: 540,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      caption,
+                      style: titleTextStyle(sizingInformation.deviceScreenType),
+                      textAlign: textAlignment,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      details,
+                      style: descriptionTextStyle(
+                          sizingInformation.deviceScreenType),
+                      textAlign: textAlignment,
+                    )
+                  ],
+                ),
               )
-            ],
-          ),
-        );
+            ]));
       },
     );
   }

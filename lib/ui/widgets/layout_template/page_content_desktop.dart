@@ -12,13 +12,14 @@ class PageContentDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        PageDetails(
+        SingleChildScrollView(
+            child: PageDetails(
           caption: caption,
           details: details,
-        ),
+        )),
         Expanded(
           child: Align(
-            alignment: FractionalOffset.bottomCenter,
+            alignment: FractionalOffset.center,
             child: CallToAction(),
           ),
         )

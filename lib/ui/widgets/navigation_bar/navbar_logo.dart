@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:praugas_site/locator.dart';
 import 'package:praugas_site/services/navigation_service.dart';
 import 'package:praugas_site/services/routing/route_names.dart';
-import 'package:praugas_site/ui/styles/logo.dart';
+import 'package:praugas_site/ui/styles/images.dart';
 
 class NavBarLogo extends StatelessWidget {
   const NavBarLogo({Key key}) : super(key: key);

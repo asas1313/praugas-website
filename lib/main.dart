@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           textTheme: Theme.of(context)
               .textTheme
-              .apply(fontFamily: 'Open Sans', bodyColor: primaryColor)),
+              .apply(fontFamily: 'Open Sans', bodyColor: bodyColor)),
       home: LayoutTemplate(),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:praugas_site/locator.dart';
 import 'package:praugas_site/services/navigation_service.dart';
+import 'package:praugas_site/ui/styles/app_colors.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -9,9 +10,23 @@ class NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        onTap: () {
-          // SERVICES SHOULD ONLY BE USED FROM A VIEW MODEL
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return menuTextColor;
+      }
+      return bodyColor;
+    }
+
+    return TextButton(
+        style: ButtonStyle(
+          foregroundColor: MaterialStateProperty.resolveWith(getColor),
+        ),
+        onPressed: () {
           locator<NavigationService>().navigateTo(navigationPath);
         },
         child: Text(

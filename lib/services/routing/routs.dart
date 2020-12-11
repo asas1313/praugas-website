@@ -10,13 +10,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(PageContentView('', ''));
     case AboutRoute:
       return _getPageRoute(PageContentView(aboutCaption, aboutDetail));
-    case ClientsRoute:
-      return _getPageRoute(PageContentView(clientsCaption, clientsDetail));
-    case WhatWeDoRoute:
-      return _getPageRoute(
-          PageContentView(whatDoWeDoCaption, whatDoWeDoDetail));
-    case ContactUsRoute:
-      return _getPageRoute(PageContentView(contactUsCaption, contactUsDetail));
+    case ServicesRoute:
+      return _getPageRoute(PageContentView(servicesCaption, servicesDetail));
+    case ContactRoute:
+      return _getPageRoute(PageContentView(contactCaption, contactDetail));
     default:
   }
 }

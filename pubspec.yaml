@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.1
   responsive_builder: ^0.3.0
-  get_it: ^4.0.4
+  get_it: ^5.0.3
   provider_architecture: ^1.1.1+1
   provider: ^4.1.2
   http: ^0.12.2
@@ -25,7 +25,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/logo.png
+    - assets/images/logo.jpg
     - assets/images/front_img.png
 
   fonts:
