@@ -17,7 +17,7 @@ class NavBarItem extends StatelessWidget {
         MaterialState.focused,
       };
       if (states.any(interactiveStates.contains)) {
-        return menuTextColor;
+        return primaryColor;
       }
       return bodyColor;
     }
