@@ -3,9 +3,8 @@ import 'package:praugas_site/ui/widgets/navigation_bar/navbar_item.dart';
 
 class DrawerItem extends StatelessWidget {
   final String title;
-  final IconData icon;
   final String navigationPath;
-  const DrawerItem(this.title, this.icon, this.navigationPath);
+  const DrawerItem(this.title, this.navigationPath);
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +12,8 @@ class DrawerItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 30, top: 60),
       child: Row(
         children: [
-          Icon(icon),
           SizedBox(
-            width: 30,
+            width: 10,
           ),
           NavBarItem(title, navigationPath)
         ],

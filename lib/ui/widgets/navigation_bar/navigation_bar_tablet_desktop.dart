@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:praugas_site/services/routing/route_names.dart';
-import 'package:praugas_site/ui/styles/common_names.dart';
 import 'package:praugas_site/ui/styles/images.dart';
+import 'package:praugas_site/ui/widgets/navigation_bar/navbar_language_item.dart';
 
 import 'navbar_item.dart';
-import 'navbar_logo.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {
   @override
@@ -17,34 +17,41 @@ class NavigationBarTabletDesktop extends StatelessWidget {
         height: 200,
         child: Column(
           mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 30,
-                ),
-                NavBarLogo(),
-              ],
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              NavBarLanguageItem("en"),
+              SizedBox(
+                width: 5,
+              ),
+              NavBarLanguageItem("fr"),
+              SizedBox(
+                width: 5,
+              ),
+              NavBarLanguageItem("lt"),
+              SizedBox(
+                width: 50,
+              )
+            ]),
+            SizedBox(
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                NavBarItem(servicesCaption, ServicesRoute),
+                NavBarItem('titleServices'.tr, ServicesRoute),
                 SizedBox(
                   width: 20,
                 ),
-                NavBarItem(aboutCaption, AboutRoute),
+                NavBarItem('titleAboutMe'.tr, AboutRoute),
                 SizedBox(
                   width: 20,
                 ),
-                NavBarItem(contactCaption, ContactRoute),
+                NavBarItem('titleContact'.tr, ContactRoute),
                 SizedBox(
                   width: 50,
                 ),
               ],
-            )
+            ),
           ],
         ));
   }

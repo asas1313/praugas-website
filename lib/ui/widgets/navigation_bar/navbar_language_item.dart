@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:praugas_site/locator.dart';
-import 'package:praugas_site/services/navigation_service.dart';
+import 'package:get/get.dart';
 import 'package:praugas_site/ui/styles/app_colors.dart';
 
-class NavBarItem extends StatelessWidget {
+class NavBarLanguageItem extends StatelessWidget {
   final String title;
-  final String navigationPath;
-  const NavBarItem(this.title, this.navigationPath);
+  const NavBarLanguageItem(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,8 @@ class NavBarItem extends StatelessWidget {
           foregroundColor: MaterialStateProperty.resolveWith(getColor),
         ),
         onPressed: () {
-          locator<NavigationService>().navigateTo(navigationPath);
+          Get.updateLocale(Locale(title));
+          Get.forceAppUpdate();
         },
         child: Text(
           title,

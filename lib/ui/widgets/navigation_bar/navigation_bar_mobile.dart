@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:praugas_site/ui/styles/app_colors.dart';
 import 'package:praugas_site/ui/styles/images.dart';
-import 'package:praugas_site/ui/widgets/navigation_bar/navbar_logo.dart';
 
 class NavigationBarMobile extends StatelessWidget {
   @override
@@ -17,15 +17,11 @@ class NavigationBarMobile extends StatelessWidget {
         children: [
           IconButton(
             icon: Icon(Icons.menu),
-            color: Colors.blue,
+            color: primaryColor,
             onPressed: () {
               return Scaffold.of(context).openDrawer();
             },
           ),
-          Row(children: [
-            NavBarLogo(),
-            SizedBox(width: 15),
-          ])
         ],
       ),
     );

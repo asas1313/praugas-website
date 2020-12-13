@@ -18,7 +18,7 @@ class NavBarLogo extends StatelessWidget {
         child: ClipRRect(
           child: Image.asset(
             logo_path,
-            width: navbar_logo_width,
+            height: navbar_logo_height,
           ),
         ),
       ),
