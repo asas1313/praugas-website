@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:praugas_site/services/routing/route_names.dart';
 import 'package:praugas_site/ui/styles/app_colors.dart';
-import 'package:praugas_site/ui/styles/common_names.dart';
 import 'package:praugas_site/ui/widgets/navigation_drawer/drawer_item.dart';
 import 'package:praugas_site/ui/widgets/navigation_drawer/navigation_drawer_header.dart';
 
@@ -19,9 +19,9 @@ class NavigationDrawer extends StatelessWidget {
       child: Column(
         children: [
           NavigationDrawerHeader(),
-          DrawerItem(servicesCaption, Icons.details, ServicesRoute),
-          DrawerItem(aboutCaption, Icons.help, AboutRoute),
-          DrawerItem(contactCaption, Icons.face, ContactRoute),
+          DrawerItem('titleServices'.tr, ServicesRoute),
+          DrawerItem('titleAboutMe'.tr, AboutRoute),
+          DrawerItem('titleContact'.tr, ContactRoute),
         ],
       ),
     );
