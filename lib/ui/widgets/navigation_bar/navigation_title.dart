@@ -20,9 +20,6 @@ class NavigationTitle extends StatelessWidget {
           title,
           style: TextStyle(fontSize: 40, color: primaryColor),
         ),
-        SizedBox(
-          width: 50,
-        )
       ]),
     );
   }

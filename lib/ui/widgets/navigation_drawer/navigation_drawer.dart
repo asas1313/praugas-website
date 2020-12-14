@@ -11,7 +11,7 @@ class NavigationDrawer extends StatelessWidget {
     return Container(
       width: 300,
       decoration: BoxDecoration(
-        color: bodyColor,
+        color: secondaryColor,
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 16),
         ],
