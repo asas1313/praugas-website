@@ -4,7 +4,6 @@ import 'package:praugas_site/services/navigation_service.dart';
 import 'package:praugas_site/services/routing/route_names.dart';
 import 'package:praugas_site/services/routing/routs.dart';
 import 'package:praugas_site/ui/widgets/navigation_bar/navigation_bar.dart';
-import 'package:praugas_site/ui/widgets/navigation_bar/navigation_title.dart';
 import 'package:praugas_site/ui/widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -23,9 +22,6 @@ class LayoutTemplate extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     NavigationBar(),
-                    NavigationTitle(
-                      title: "",
-                    ),
                     Expanded(
                       child: Navigator(
                         key: locator<NavigationService>().navigatorKey,

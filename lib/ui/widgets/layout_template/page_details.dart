@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:praugas_site/ui/styles/text_styles.dart';
+import 'package:praugas_site/ui/widgets/navigation_bar/navigation_title.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class PageDetails extends StatelessWidget {
@@ -18,22 +19,17 @@ class PageDetails extends StatelessWidget {
 
         return Container(
             alignment: Alignment.topLeft,
-            constraints: BoxConstraints(maxWidth: 520),
+            constraints: BoxConstraints(maxWidth: 720),
             child: Column(children: [
               Row(children: [
                 SizedBox(width: 30),
                 Container(
-                  width: 460,
+                  width: 660,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        caption,
-                        style:
-                            titleTextStyle(sizingInformation.deviceScreenType),
-                        textAlign: textAlignment,
-                      ),
+                      NavigationTitle(title: caption),
                       SizedBox(
                         height: 30,
                       ),
