@@ -14,9 +14,8 @@ dependencies:
   responsive_builder: ^0.3.0
   get: ^3.22.2
   get_it: ^5.0.3
-  provider_architecture: ^1.1.1+1
-  provider: ^4.1.2
   http: ^0.12.2
+  auto_size_text: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -36,3 +35,6 @@ flutter:
           weight: 800
         - asset: assets/fonts/OpenSans-ExtraBold.ttf
           weight: 400
+    - family: Calibri
+      fonts:
+        - asset: assets/fonts/Calibri-Regular.ttf

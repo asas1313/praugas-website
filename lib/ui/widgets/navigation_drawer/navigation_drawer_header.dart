@@ -12,12 +12,12 @@ class NavigationDrawerHeader extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'SKILL UP NOW',
+            'Praugas',
             style: TextStyle(
                 fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
           ),
           Text(
-            'TAP HERE',
+            '',
             style: TextStyle(color: Colors.white),
           )
         ],

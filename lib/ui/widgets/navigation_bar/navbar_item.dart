@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:praugas_site/locator.dart';
 import 'package:praugas_site/services/navigation_service.dart';
 import 'package:praugas_site/ui/styles/app_colors.dart';
+import 'package:praugas_site/ui/styles/text_styles.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -31,7 +32,7 @@ class NavBarItem extends StatelessWidget {
         },
         child: Text(
           title,
-          style: TextStyle(fontSize: 18),
+          style: menuTextStyle(),
         ));
   }
 }

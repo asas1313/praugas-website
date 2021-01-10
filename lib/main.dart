@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           textTheme: Theme.of(context)
               .textTheme
-              .apply(fontFamily: 'Open Sans', bodyColor: bodyColor)),
+              .apply(fontFamily: 'Calibri', bodyColor: bodyColor)),
       home: LayoutTemplate(),
     );
   }

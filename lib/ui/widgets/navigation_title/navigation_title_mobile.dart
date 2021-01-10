@@ -1,13 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:praugas_site/ui/styles/app_colors.dart';
+import 'package:praugas_site/ui/widgets/navigation_bar/navigation_title/navbar_logo.dart';
 
-import 'navbar_logo.dart';
-
-class NavigationTitle extends StatelessWidget {
+class NavigationTitleMobile extends StatelessWidget {
   final String title;
 
-  const NavigationTitle({Key key, this.title}) : super(key: key);
+  const NavigationTitleMobile({Key key, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +15,11 @@ class NavigationTitle extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: Row(children: [
         NavBarLogo(),
-        Text(
-          title,
-          style: TextStyle(fontSize: 40, color: primaryColor),
+        Expanded(
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 40, color: primaryColor),
+          ),
         ),
       ]),
     );

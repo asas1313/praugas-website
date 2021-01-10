@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:praugas_site/ui/widgets/layout_template/page_view.dart';
+import 'package:praugas_site/ui/widgets/layout_template/page_details.dart';
 
 import 'route_names.dart';
 
@@ -9,17 +9,20 @@ Route<dynamic> generateRoute(
 ) {
   switch (settings.name) {
     case HomeRoute:
-      return _getPageRoute(PageContentView('titleMain'.tr, 'contentMain'.tr));
+      return _getPageRoute(
+          PageDetails(title: 'titleMain'.tr, details: 'contentMain'.tr));
     case AboutRoute:
       return _getPageRoute(
-          PageContentView('titleAboutMe'.tr, 'contentAboutme'.tr));
+          PageDetails(title: 'titleAboutMe'.tr, details: 'contentAboutme'.tr));
     case ServicesRoute:
-      return _getPageRoute(
-          PageContentView('titleServices'.tr, 'contentServices'.tr));
+      return _getPageRoute(PageDetails(
+          title: 'titleServices'.tr, details: 'contentServices'.tr));
     case ContactRoute:
       return _getPageRoute(
-          PageContentView('titleContact'.tr, 'contentContact'.tr));
+          PageDetails(title: 'titleContact'.tr, details: 'contentContact'.tr));
     default:
+      return _getPageRoute(
+          PageDetails(title: 'titleMain'.tr, details: 'contentMain'.tr));
   }
 }
 
